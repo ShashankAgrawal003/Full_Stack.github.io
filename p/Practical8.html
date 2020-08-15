@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        #mainbackground{
+           border:7px solid lightgrey;
+           padding:10px;
+           width: 1366px;
+           margin:0px auto;
+        }
+        .section:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        #navBar{
+            height:65px;     
+            width: 1366px;
+            position: fixed;
+            top:0;
+            background-color: darkgrey;
+            color:white;
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            list-style:none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        
+        ul li{
+            float:left;
+            padding: 10px 20px;
+        }
+        ul li a {
+            text-decoration: none;
+            padding:10px 20px;
+            display: block; 
+            color:white;
+            font-weight: bold;
+            
+        }
+        ul li a:hover{
+            background-color:lightgreen;
+            color:white;
+        }
+        #banner{
+            margin-top: 100px;
+            width: 1366px;
+            height: 700px;
+            background-image: url(../images/prac8-lapicode.jpg);
+            background-size: 1366px 700px;
+        } 
+        #banner h1{
+            color: white;
+            text-align: left;
+            text-transform: uppercase ;
+            padding: 15px;
+            font-size:60px;
+            
+            
+        }
+        
+        div h1{
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+        .section{
+            width:100%; 
+            margin-bottom: 50px;
+            margin-top: 150px;
+            
+        }
+        
+        .circle{
+            height:275px;
+            width:18%;
+            border-radius: 50%;
+            float: left;
+            margin-left:5%;
+            margin-top: 10px;
+            
+            
+        }
+        #content{
+            height: 500px;
+        }
+        #leftside{
+            width:48%;
+            height:500px;
+            background-color: grey;
+            float: left; 
+            margin-top: 10px;
+            padding:10px;
+        }
+        #leftside h2{
+            text-align: left;
+            color:white;
+            
+        }
+        #leftside p{
+            font-size: 17px;
+            padding-top: 10px;
+            color: white;
+            text-align: justify;
+        }
+        #rightside{
+            width:48%;
+            height:500px;
+            float: right;
+            margin-top: 10px;
+        }
+        #rightside h2{
+            color: white;
+            
+            padding: 10px;
+            
+            
+        }
+        #project1{
+            height: 160px;
+            background-image: url('../images/prac8-gd pic.jpg');
+            margin-bottom: 19px;
+        }
+        #project2{
+            height: 160px;
+            background-image: url('../images/prac8-network.jpeg');
+            margin-bottom: 19px;
+        }
+        #project3{
+            height: 160px;
+            background-image: url('../images/prac8-mobiletablet.jpg');
+            
+        }
+
+        .card{
+            height:320px;
+            width:18%;
+            background-color:rgb(202, 181, 181);
+            float: left;
+            margin-top: 15px;
+            margin-left:87px;
+        }
+        .card img{
+            height: 150px;
+            width:100%;
+            display:block;
+            margin: auto;
+            
+        }
+        .card h3{
+            padding: 10px;
+            text-align: center;
+        }
+        .card p{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: justify;
+            color: white;
+            padding-bottom: 20px;
+        }
+        .card a{
+            text-align: center;
+            background-color: orangered;
+            border-radius: 9px;
+            display:block;
+            margin: auto;
+            padding: 8px; 
+            border:1px solid none;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        
+        }
+        .card a:hover{
+            background-color: blue;
+        }
+        #footer{
+            background-color: pink;
+            height:70px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 20px;
+
+        }
+        #footer p{
+            font-size:25px;
+            color:black;
+            
+        }
+        #footer a{
+            color:blue;
+        }
+            
+    </style>
+</head>
+</head>
+<body>
+    <div id="mainbackground">
+        <div id="header">
+            <ul id="navBar">
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="#team">TEAM</a>
+                </li>
+                <li>
+                    <a href="#technologies">TECHNOLOGIES</a>
+                </li>
+                <li>
+                    <a href="#footer">CONTACTS</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="banner">
+            <h1>Practical-8</h1>
+            
+        
+        </div>
+        <div id="team"> </div>
+            <div class="section">
+                <h1>Team Members</h1>
+                <img class="circle" src="../images/prac8-1.png" alt="image1">  
+                <img class="circle" src="../images/prac8-2.png" alt="image2"> 
+                <img class="circle" src="../images/prac8-3.png" alt="image3"> 
+                <img class="circle" src="../images/prac8-4.png" alt="image4"> 
+            </div>
+             
+        <div id="about"></div>
+            <div class="section">
+                <div id="content">
+                    <h1>About us</h1>
+                    <div id="leftside">
+                        <h2>About Project</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio laborum natus saepe 
+                                asperiores excepturi rerum in magni commodi culpa ratione officiis unde, accusamus a 
+                                veniam pariatur quam ipsam! Asperiores illo est et molestiae iusto id possimus, corporis
+                                 qui tempore animi beatae ex eligendi debitis, cupiditate tenetur fugit, voluptas 
+                                 consequatur amet suscipit. Corporis tempore dolore alias minus animi iusto consequatur 
+                                 repudiandae, veritatis assumenda necessitatibus doloremque? Culpa, reprehenderit ullam 
+                                 perferendis numquam deleniti nulla ipsum eos, exercitationem neque aperiam fugiat 
+                                 asperiores, non sint provident. Accusantium inventore minima voluptatibus amet harum, 
+                                 iure quibusdam dolorem a eligendi facere libero qui ut ducimus corrupti porro labore 
+                                 repudiandae consequatur illo neque, mollitia natus aperiam? Voluptates enim dolorem illo, 
+                                 pariatur laborum asperiores neque accusantium labore tenetur sint tempore assumenda quis 
+                                 sed? Praesentium corrupti voluptatibus eius placeat cumque maxime aut, odio incidunt ex 
+                                 sint, laborum corporis adipisci dignissimos. Esse, reprehenderit praesentium! Soluta harum 
+                                 nulla aliquam eligendi est provident veniam tenetur, nostrum consectetur quibusdam maiores 
+                                 commodi repellat, cumque deleniti modi adipisci culpa, excepturi fugiat explicabo 
+                                 doloremque incidunt. Totam, repudiandae optio hic, reiciendis cum numquam soluta velit 
+                                 asperiores, atque repellendus consequuntur! Cupiditate, placeat voluptates deserunt 
+                                 dolores tempore quasi. Pariatur, modi quas. Laudantium, nulla? Quia vitae cum mollitia 
+                                 architecto praesentium ad, vero excepturi earum consectetur illo! Facilis iste iusto 
+                                 natus dignissimos ipsum, pariatur est culpa nostrum, reprehenderit doloremque debitis 
+                                 magni ad suscipit voluptates dolore ut ducimus id illo vitae adipisci cupiditate, eos vel. 
+                                 Tenetur vitae deleniti sequi, explicabo, sint repudiandae animi fugiat eveniet ratione, 
+                                 in consectetur perspiciatis voluptatum ducimus architecto quis quam!</p>
+                    </div>
+                    <div id="rightside">
+                        <div id="project1">
+                            <h2><b>PROJECT - 1</b></h2>
+                        </div>
+                        <div id="project2">
+                            <h2><b>PROJECT - 2</b></h2>
+                        </div>
+                        <div id="project3">
+                            <h2><b>PROJECT - 3</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id ="technologies"></div>
+        <div class="section">
+            <h1>Technology Used</h1>
+            <div class="card">
+                <img src="../images/html.png" alt="html">
+                <h3>Introduction to HTML</h3>
+                <p>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.Hypertext refers to the way in which Web pages are linked together.</p>
+                <a href="HTML.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/css.png" alt="css">
+                <h3>Introduction to CSS</h3>
+                <p>CSS full form Cascading Style Sheets and is the preferred way for setting the look and feel of a website. It is a markup language responsible for how your web pages will look like.</p>
+                <a href="css.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/javascript.jpg" alt="javascript">
+                <h3>Introduction to JavaScript</h3>
+                <p>JavaScript is a powerful client-side scripting language and used mainly for enhancing the interaction of a user with the webpage.We can make your webpage more lively with it.</p>
+                <a href="javascript.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/bootstrap.png" alt="bootstrap">
+                <h3>Introduction to bootstrap</h3>
+                <p>Bootstrap is a free and open-source framework for creating websites and web applications. It's the most popular HTML, CSS, and JS framework for developing responsive sites.</p>
+                <a href="bootstrap.html">Read More</a>
+            </div>
+        
+        </div>
+        <div id="contact"></div>
+        <div class="section" style="margin-bottom: 0px;">
+            <h1>Contacts</h1>
+            <div id="footer">
+                <p>Website Template for Practical-8 &copy;<a href="https://www.beta-labs.in/" target="_blank">Beta-Labs </a></p> 
+                <br>
+                <a href="#top">Back To Top</a>
+        </div>
+        
+        </div>
+    </div>
+    </body>
+    </html>
