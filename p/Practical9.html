@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-9</title>
+    <style>
+        *{
+            scroll-behavior: smooth;
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box; 
+            
+        }
+        #mainbackground{
+           padding:10px;
+           
+           margin:0px auto;
+        }
+        .section:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        #content:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+       
+        #header{
+            width: 100%;
+            height: 70px;
+            padding: 0 20px ;     
+            background-color: grey;
+            position: fixed;
+            top:0;
+            right:0;
+        }
+        #header .navBar{
+            float: right;
+            list-style-type: none;
+        }   
+        .navBar li{
+            display: inline-block;
+            line-height: 70px;
+            
+            
+        }
+        .navBar li a {
+            color:white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding:  0px 20px;
+            transition: .4s;
+         }
+
+        .navBar li a:hover, .show-btn:hover, .hide-btn:hover {
+            color: skyblue;
+            }
+        .show-btn, .hide-btn{
+            font-size: 30px;
+            color: white;
+            line-height:70px;
+            transition: .4s;
+            display: none;
+        }
+        .show-btn{
+            float: right;
+        }
+    
+        #chk
+        {
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+        }
+        #banner{
+            margin-top: 100px;
+            
+            height: 700px;
+            background-image: url(../images/prac8-lapicode.jpg);
+            background-size: 100vw 100vh;
+        } 
+        #banner h1{
+            color: white;
+            text-align: left;
+            text-transform: uppercase ;
+            padding: 15px;
+            font-size:60px;
+            
+            
+        }
+        
+        div h1{
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+        .section{
+           
+            margin-bottom: 50px;
+            margin-top: 150px;
+            
+        }
+        
+        .circle{
+            height:250px;
+            width:250px;           
+            border-radius: 50%;
+            float: left;
+            margin-left:5%;           
+            margin-top: 10px;
+            
+            
+        }
+        #content{
+         
+            width:100%;
+        }
+        #leftside{
+            width:48%;
+            height:500px;
+            background-color: grey;
+            float: left; 
+            margin-top: 10px;
+            padding:10px;
+        }
+        #leftside h2{
+            text-align: left;
+            color:white;
+            
+        }
+        #leftside p{
+            font-size: 20px;      
+            padding-top: 10px;   
+            color: white;
+            text-align: justify;
+        }
+        #rightside{
+            width:48%;
+            height:500px;
+            float: right;
+            margin-top: 10px;
+        }
+        #rightside h2{
+            color: white;
+            
+            padding: 10px;
+            
+            
+        }
+        #project1{
+            height: 160px;
+            background-image: url('../images/prac8-gd pic.jpg');
+            margin-bottom: 19px;
+        }
+        #project2{
+            height: 160px;
+            background-image: url('../images/prac8-network.jpeg');
+            margin-bottom: 19px;
+        }
+        #project3{
+            height: 160px;
+            background-image: url('../images/prac8-mobiletablet.jpg');
+            
+        }
+
+        .card{
+            height:350px;
+            width:245px;        
+            background-color:lightgrey;
+            float: left;
+            margin-top: 15px;
+            margin-left:67px;  
+        }
+        .card img{
+            height: 150px;
+            width:100%;
+            display:block;
+            margin: auto;
+            
+        }
+        .card h3{
+            padding: 10px;
+            text-align: center;
+        }
+        .card p{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: justify;
+            color: white;
+            padding-bottom: 20px;
+        }
+        .card a{
+            text-align: center;
+            background-color: orangered;
+            border-radius: 10px;
+            display:block;
+            margin: auto;
+            padding: 8px; 
+          
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        
+        }
+        .card a:hover{
+            background-color: blue;
+        }
+        #footer{
+            background-color: pink;
+            
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 20px;
+
+        }
+        #footer p{
+            font-size:25px;
+            color:black;
+            
+        }
+        #footer a{
+            color:blue;
+        }
+
+/* First breakPoint */
+@media (min-width: 871px) and (max-width: 1275px) {
+.circle{
+height:250px;
+width:250px;
+border-radius: 50%;
+float: left;
+margin-left:20%;
+margin-top: 10px;
+}
+#content{
+    overflow: hidden;
+}
+#leftside{
+width:100%;
+background-color: grey;
+margin-top: 10px;
+padding:20px;
+}
+#rightside{
+width:100%;
+margin-top: 10px;
+}
+#project1{
+height: 170px;
+background-image: url('../images/prac8-gd pic.jpg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project2{
+height: 170px;
+background-image: url('../images/prac8-network.jpeg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project3{
+height: 170px;
+background-image: url('../images/prac8-mobiletablet.jpg');
+background-size: cover;
+}
+.card{
+    height:350px;
+    width:250px;
+    background-color:rgb(202, 181, 181);
+    float: left;
+    margin-top: 15px;
+    margin-left:20%;
+    margin-bottom: 30px;    
+}
+}
+/* Breakpoint 2 */
+@media (min-width: 681px) and (max-width: 870px) {
+.circle{
+height:250px;
+width:250px;
+border-radius: 50%;
+float: left;
+margin-left:12%;
+margin-top: 10px;
+}
+#content{
+    overflow: hidden;
+}
+#leftside{
+width:100%;
+background-color: grey;
+margin-top: 10px;
+padding:20px;
+}
+#rightside{
+width:100%;
+margin-top: 10px;
+}
+#project1{
+height: 170px;
+background-image: url('../images/prac8-gd pic.jpg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project2{
+height: 170px;
+background-image: url('../images/prac8-network.jpeg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project3{
+height: 170px;
+background-image: url('../images/prac8-mobiletablet.jpg');
+background-size: cover;
+}
+.card{
+height:350px;
+width:250px;
+background-color:rgb(202, 181, 181);
+float: left;
+margin-top: 15px;
+margin-left:12%;
+margin-bottom: 30px;  
+}
+.show-btn,.hide-btn{
+display: block;
+}
+.navBar{
+position: fixed;
+top: 0;
+right: -100%;
+width: 100%;
+height: 100vh;
+background-color: black;
+text-align: center;
+padding: 80px 0;
+transition: .7s;
+line-height: normal;
+}
+#chk:checked ~.navBar{
+right: 0;
+}
+.navBar li{
+display: block;
+padding: 20px 0;
+}
+.navBar li a{
+display: block;
+}
+.hide-btn{
+position: absolute;
+right: 20px;
+top: 10px;
+}
+}
+/* BreakPoint 3 */
+@media (max-width: 680px){
+.circle{
+height:250px;
+width:250px;
+border-radius: 50%;
+float: left;
+margin-left:25%;
+margin-top: 10px;
+}
+#content{
+    overflow: hidden;
+}
+#leftside{
+width:100%;
+background-color: grey;
+margin-top: 10px;
+padding:20px;
+}
+#rightside{
+width:100%;
+margin-top: 10px;
+}
+#project1{
+height: 170px;
+background-image: url('../images/prac8-gd pic.jpg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project2{
+height: 170px;
+background-image: url('../images/prac8-network.jpeg');
+background-size: cover;
+margin-bottom: 15px;
+}
+#project3{
+height: 170px;
+background-image: url('../images/prac8-mobiletablet.jpg');
+background-size: cover;
+}
+.card{
+height:350px;
+width:250px;
+background-color:rgb(202, 181, 181);
+float: left;
+margin-top: 15px;
+margin-left:29%;
+margin-bottom: 30px;
+}
+.show-btn,.hide-btn{
+display: block;
+}
+.navBar{
+position: fixed;
+top: 0;
+right: -100%;
+width: 100%;
+height: 100vh;
+background-color: black;
+text-align: center;
+padding: 80px 0;
+transition: .7s;
+line-height: normal;
+}
+#chk:checked ~.navBar{
+right: 0;
+}
+.navBar li{
+display: block;
+padding: 20px 0;
+}
+.navBar li a{
+display: block;
+}
+.hide-btn{
+position: absolute;
+right: 20px;
+top: 10px;
+}
+}
+</style>
+</head>
+<body>
+    <div id="mainbackground">
+        <div id="header">
+             <input type="checkbox" id="chk">
+             <label for="chk" class="show-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="navBar">
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="#team">TEAM</a>
+                </li>
+                <li>
+                    <a href="#technologies">TECHNOLOGIES</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACTS</a>
+                </li>   
+                <label for="chk" class="hide-btn">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </label>
+            </ul>
+        </div>
+
+        <div id="banner">
+            <h1>Practical-9</h1>
+            
+        
+        </div>
+        <div id="team"> </div>
+            <div class="section">
+                <h1>Team Members</h1>
+                <img class="circle" src="../images/prac8-1.png" alt="image1">  
+                <img class="circle" src="../images/prac8-2.png" alt="image2"> 
+                <img class="circle" src="../images/prac8-3.png" alt="image3"> 
+                <img class="circle" src="../images/prac8-4.png" alt="image4"> 
+            </div>
+             
+        <div id="about"></div>
+            <div class="section">
+                <div id="content">
+                    <h1>About us</h1>
+                    <div id="leftside">
+                        <h2>About Project</h2>
+                            <p>In this project we are basically creating a <b>Responsive Website</b> with using css properties
+                                like <u>display:flex;display:border;justify-content: space-evenly;</u>etc.As we have already used image map as in nav bar.
+                                So,in this we have built the horizontal nav bar using the <b>Ordered and Unordered list</b> with float left
+                                property.Then in this project we have fixed our nav baar at the top of the page only ie 
+                                we have used position property of css.
+                                <br>
+                                <br>
+                                Then we have implemented background imaging concept.Then we have made card layout
+                                like the before project6 with all that achor refering on Read more button.
+                                Then in the footer section we have add our contacts info.In that we have mentioned 
+                                our source of learning site name also,then a anchor tag or link to reach at the top of our page.
+                                <br>
+                                
+                                In this project we have used <b>::After</b> tag in our class name section, to give parent a property
+                                ie content:' '; (blank) and clear:both; so that sections childs two float tags didnt create any problem .
+                                <br>
+                                <br>
+                                The <b>Read More </b>button is a clickable box to know more about specific language of website development.
+                                If you will click then a image of topic and more contents about it are there.
+
+                            </p>
+                    </div>
+                    <div id="rightside">
+                        <div id="project1">
+                            <h2><b>PROJECT - 1</b></h2>
+                        </div>
+                        <div id="project2">
+                            <h2><b>PROJECT - 2</b></h2>
+                        </div>
+                        <div id="project3">
+                            <h2><b>PROJECT - 3</b></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id ="technologies"></div>
+        <div class="section">
+            <h1>Technology Used</h1>
+            <div class="card">
+                <img src="../images/html.png" alt="html">
+                <h3>Introduction to HTML</h3>
+                <p>HTML stands for Hypertext Markup Language, and it is the most widely used language to write in our Web Pages. Hypertext refers to the way in which Web pages are linked together.</p>
+                <a href="HTML.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/css.png" alt="css">
+                <h3>Introduction to CSS</h3>
+                <p>CSS full form Cascading Style Sheets and is the preferred way for setting the look and feel of a website. It's a markup language responsible for how your web pages will look like.</p>
+                <a href="css.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/javascript.jpg" alt="javascript">
+                <h3>Introduction to JavaScript</h3>
+                <p>JavaScript is a powerful client-side scripting language and used mainly for enhancing the interaction of a user with the webpagea and we can make your webpage more lively with it.</p>
+                <a href="javascript.html">Read More</a>
+            </div>
+            <div class="card">
+                <img src="../images/bootstrap.png" alt="bootstrap">
+                <h3>Introduction to bootstrap</h3>
+                <p>Bootstrap is a free and open-source framework for creating websites and web applications . It is the most popular HTML , CSS , and JS framework for developing responsive sites .</p>
+                <a href="bootstrap.html">Read More</a>
+            </div>
+        
+        </div>
+        <div id="contact"></div>
+        <div class="section" style="margin-bottom: 0px;">
+            <h1>Contacts</h1>
+            <div id="footer">
+                <p>Website Template for Practical-8 &copy;<a href="https://www.beta-labs.in/" target="_blank">Beta-Labs </a></p> 
+                <br>
+                <a href="#top">Back To Top</a>
+        </div>
+        </div>
+    </div>
+    </body>
+    </html>
