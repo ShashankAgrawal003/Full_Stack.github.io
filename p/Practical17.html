@@ -56,6 +56,7 @@
         name.addEventListener("blur", setName);
         //event handler
 
+
         //functions
         function showtime() {
             let today = new Date();
@@ -71,9 +72,11 @@
             date.innerHTML = `${todaydate}`;
 
         }
+
         function addzero(n) {
             return ((parseInt(n, 10) < 10 ? '0' : '') + n);
         }
+
         function setGreeting() {
             let today = new Date();
             let hour = today.getHours();
@@ -115,6 +118,7 @@
             }
         }
 
+        
         //functional cal
         showtime();
         setGreeting();
